@@ -1,0 +1,12 @@
+{
+  "apt": {
+    "mirror": "us-east-1.ec2"
+  },
+  "run_list": [
+    "recipe[apt]",
+    "recipe[wercker-essential]",
+    "recipe[python::default]",
+    "recipe[mysql::client]",
+    "recipe[postgresql::client]"
+  ]
+}
