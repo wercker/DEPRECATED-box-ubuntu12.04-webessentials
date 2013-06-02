@@ -1,7 +1,42 @@
 name: ubuntu12.04-webessentials
-version: 0.0.1
-inherits: wercker/ubuntu12.04-chef10.18.2
+version: 0.0.2
+inherits: wercker/ubuntu12.04-chef10.18.2@0.0.8
 type : main
-os : ubuntu@12.04
+platform : ubuntu@12.04
 description : Base box with most popular libraries for the web installed
+packages :
+  - wget
+  - build-essential
+  - curl
+  - git-core
+  - nano
+  - language-pack-en
+  - nodejs
+  - erlang
+  - openjdk-6-jre
+  - ruby1.9.3
+  - libxslt-dev
+  - libxml2-dev
+  - imagemagick
+  - libmagickwand-dev
+  - zlib1g-dev
+  - libfreetype6-dev
+  - liblcms1-dev
+  - libjpeg8-dev
+  - libevent-dev
+  - libev-dev
+  - libyaml-dev
+  - libffi-dev
+  - libtidy-dev
+  - libsqlite3-dev
+  - libcurl4-openssl-dev
+  - libssl-dev
+  - memcached
+  - mongodb-clients
+  - xvfb
+  - firefox
+  - libqtwebkit4
+  - wkhtmltopdf
+  - elasticsearch@0.20.5
+  - phantomjs@1.8.2
 script : sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
