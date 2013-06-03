@@ -1,5 +1,5 @@
 name: ubuntu12.04-webessentials
-version: 0.0.2
+version: 0.0.3
 inherits: wercker/ubuntu12.04-chef10.18.2@0.0.8
 type : main
 platform : ubuntu@12.04
@@ -39,4 +39,5 @@ packages :
   - wkhtmltopdf
   - elasticsearch@0.20.5
   - phantomjs@1.8.2
+  - libv8-dev
 script : sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
