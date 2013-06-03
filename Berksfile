@@ -1,6 +1,6 @@
 site :opscode
 
-cookbook 'wercker-essential', github: "wercker/wercker-essential-cookbook", ref: "0.0.2"
+cookbook 'wercker-essential', github: "wercker/wercker-essential-cookbook", ref: "0.0.3"
 
 cookbook 'apt'
 cookbook 'python'
