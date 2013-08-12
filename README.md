@@ -4,6 +4,8 @@ Base box with most popular libraries for the web installed
 
 # What's new
 
+- Update wercker-essential-cookbook to 0.0.5
+  - Adds memcached-dev package
 - Update wercker-essential-cookbook to 0.0.4
   - Update phantomjs to 1.9.1
 
