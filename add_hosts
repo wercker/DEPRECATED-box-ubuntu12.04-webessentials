@@ -15,6 +15,7 @@ def main(argv):
     bitbucket_host = fh_host.read()
     fh_host.close()
 
+    print "modifying: " + file_name
     fh = open(file_name, "w+")
     # github = netaddr.IPNetwork('192.0.4.0/25')
     github = netaddr.IPNetwork('192.30.252.0/22')
