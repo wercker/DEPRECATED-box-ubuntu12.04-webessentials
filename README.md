@@ -34,6 +34,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 0.0.7
+- github and bitbucket ip address added to known hosts
 ## 0.0.5
 
 - Update wercker-essential-cookbook to 0.0.4
