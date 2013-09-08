@@ -1,13 +1,10 @@
 # ubuntu12.04-webessentials box
 
-Base box with most popular libraries for the web installed
+Base box with most popular libraries for the web installed.
 
 # What's new
 
-- Update wercker-essential-cookbook to 0.0.5
-  - Adds memcached-dev package
-- Update wercker-essential-cookbook to 0.0.4
-  - Update phantomjs to 1.9.1
+- GitHub and Bitbucket public keys added to known_hosts
 
 # License
 
@@ -34,8 +31,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
-## 0.0.7
-- github and bitbucket ip address added to known hosts
+## 0.0.9
+
+- GitHub and Bitbucket public keys added to known_hosts
+
 ## 0.0.5
 
 - Update wercker-essential-cookbook to 0.0.4
