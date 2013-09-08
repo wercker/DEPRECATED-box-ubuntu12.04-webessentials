@@ -31,7 +31,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
-## 0.0.9
+## 0.0.10
 
 - GitHub and Bitbucket public keys added to known_hosts
 
