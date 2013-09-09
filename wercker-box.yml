@@ -1,5 +1,5 @@
 name: ubuntu12.04-webessentials
-version: 0.0.10
+version: 0.0.11
 inherits: wercker/ubuntu12.04-chef10.18.2@0.0.8
 type: main
 platform: ubuntu@12.04
@@ -45,3 +45,7 @@ script: |
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
   export
   ./hosts.sh
+  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+  sudo apt-get --purge remove postgresql\*
+  sudo apt-get install postgresql-client-9.2
+  sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/docker.list"
