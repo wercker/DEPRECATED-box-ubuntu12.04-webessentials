@@ -4,7 +4,7 @@ Base box with most popular libraries for the web installed.
 
 # What's new
 
-- GitHub and Bitbucket public keys added to known_hosts
+- Update postgres-client to 9.2
 
 # License
 
@@ -30,6 +30,10 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.11
+
+- Update postgres-client to 9.2
 
 ## 0.0.10
 
