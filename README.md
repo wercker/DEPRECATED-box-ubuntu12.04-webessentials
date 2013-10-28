@@ -31,6 +31,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 0.0.12
+
+- update to pgdg-keyring for postgres
+
 ## 0.0.11
 
 - Update postgres-client to 9.2
