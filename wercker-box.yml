@@ -43,6 +43,8 @@ packages:
   - libv8-dev
   - postgresql-client@9.2
   - optipng
+  - libjpeg-dev
+  - libpng-dev
 script: |
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
   export
@@ -54,4 +56,4 @@ script: |
   sudo apt-get update
   sudo apt-get install postgresql-client-9.2
   
-  sudo apt-get install optipng
+  sudo apt-get install optipng libjpeg-dev libpng-dev -y
