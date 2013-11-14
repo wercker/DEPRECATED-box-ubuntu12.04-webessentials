@@ -4,7 +4,9 @@ Base box with most popular libraries for the web installed.
 
 # What's new
 
-- Update postgres-client to 9.2
+- adds libjpeg-dev
+- adds libpng-dev
+- adds optipng
 
 # License
 
@@ -30,6 +32,12 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.13
+
+- adds libjpeg-dev
+- adds libpng-dev
+- adds optipng
 
 ## 0.0.12
 
