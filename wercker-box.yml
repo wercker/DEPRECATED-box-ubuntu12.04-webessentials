@@ -1,5 +1,5 @@
 name: ubuntu12.04-webessentials
-version: 0.0.13
+version: 1.0.0
 inherits: wercker/ubuntu12.04-chef10.18.2@0.0.8
 type: main
 platform: ubuntu@12.04
