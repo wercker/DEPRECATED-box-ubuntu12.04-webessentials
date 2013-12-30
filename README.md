@@ -12,6 +12,10 @@ The MIT License (MIT)
 
 # Changelog
 
+## 1.0.1
+
+- use version bumped chef box (for inheritence)
+
 ## 1.0.0
 
 - Make sure $HOME/tmp exists and is owned by `ubuntu`.
