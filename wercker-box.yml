@@ -51,14 +51,11 @@ script: |
   ./hosts.sh
   sudo apt-get --purge remove postgresql\*
 
-  sudo add-apt-repository ppa:chris-lea/node.js -y
-  sudo apt-get update
-  sudo apt-get install nodejs
-
   wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-  sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/docker.list"
-  sudo apt-get update
-  sudo apt-get install postgresql-client-9.2 optipng libjpeg-dev libpng-dev -y
+  sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/postgresql.list"
+  sudo add-apt-repository ppa:chris-lea/node.js -y
+  
+  sudo apt-get install nodejs postgresql-client-9.2 optipng libjpeg-dev libpng-dev -y
 
   mkdir -p $HOME/tmp
   sudo chown ubuntu:ubuntu $HOME/tmp
