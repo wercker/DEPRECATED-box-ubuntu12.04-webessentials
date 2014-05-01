@@ -62,10 +62,8 @@ script: |
 
   sudo apt-get update
   sudo apt-get install nodejs postgresql-client-9.3 optipng libjpeg-dev libpng-dev -y
-  if [ ! $DATA = "v0.10.26" ]
-  then
-    error "Node v0.10.26 expected, got: $DATA"
-  fi
+  export DATA=`node -v`
+  if [ ! $DATA = "v0.10.26" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
 
   # download/build optipng
   cd $HOME
