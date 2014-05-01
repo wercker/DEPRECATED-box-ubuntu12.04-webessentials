@@ -68,12 +68,13 @@ script: |
   # download/build optipng
   cd $HOME
   wget http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.5/optipng-0.7.5.tar.gz
-  cd optipng-0.7.5
+  tar -C optipng -xf optipng-0.7.5.tar.gz
+  cd optipng
   ./configure
   make
   sudo checkinstall
   cd $HOME
-  rm -rf optipng-0.7.5
+  rm -rf optipng
   optipng -v
   error "show optipng version"
 
