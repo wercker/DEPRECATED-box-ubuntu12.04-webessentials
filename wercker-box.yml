@@ -65,6 +65,8 @@ script: |
   # export DATA=`node -v`
   # if [ ! $DATA = "v0.10.26" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
 
+  sudo apt-get update
+  sudo apt-get install wget build-essential checkinstall
   # download/build optipng
   cd $HOME
   wget http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.5/optipng-0.7.5.tar.gz
