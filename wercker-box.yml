@@ -74,7 +74,7 @@ script: |
   cd optipng-0.7.5
   ./configure
   make
-  sudo checkinstall
+  sudo checkinstall -y
   cd $HOME
   sudo rm -rf optipng-0.7.5
   sudo rm optipng-0.7.5.tar.gz
