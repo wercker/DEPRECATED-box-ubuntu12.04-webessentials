@@ -12,6 +12,11 @@ The MIT License (MIT)
 
 # Changelog
 
+## 1.0.2
+- use newer node version (0.10.26)
+- optipng updated to 0.7.5
+- postgres-client updated to 9.3
+
 ## 1.0.1
 
 - use version bumped chef box (for inheritence)

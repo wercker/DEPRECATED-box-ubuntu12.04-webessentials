@@ -1,5 +1,5 @@
 name: ubuntu12.04-webessentials
-version: 1.0.2
+version: 1.0.2-alpha
 inherits: wercker/ubuntu12.04-chef10.18.2@1.0.0
 type: main
 platform: ubuntu@12.04
@@ -54,9 +54,25 @@ script: |
   wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
   sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/postgresql.list"
   sudo add-apt-repository ppa:chris-lea/node.js -y
-  
-  sudo apt-get install nodejs postgresql-client-9.2 optipng libjpeg-dev libpng-dev -y
 
+  sudo apt-get update
+  sudo apt-get install nodejs postgresql-client-9.3 optipng libjpeg-dev libpng-dev -y
+  if [ ! $DATA = "v0.10.26" ]
+  then
+    error "Node v0.10.26 expected, got: $DATA"
+  fi
+
+  # download/build optipng
+  cd $HOME
+  wget http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.5/optipng-0.7.5.tar.gz
+  cd optipng-0.7.5
+  ./configure
+  make
+  sudo checkinstall
+  cd $HOME
+  rm -rf optipng-0.7.5
+
+  # fix permissions for home temp folder
   mkdir -p $HOME/tmp
   sudo chown ubuntu:ubuntu $HOME/tmp
   chmod 755 $HOME/tmp
