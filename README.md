@@ -16,6 +16,7 @@ The MIT License (MIT)
 - use newer node version (0.10.26)
 - optipng updated to 0.7.5
 - postgres-client updated to 9.3
+- box no longer inherits from wercker/box-ubuntu12.04-chef10.18.2
 
 ## 1.0.1
 

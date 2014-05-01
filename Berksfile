@@ -1,6 +1,6 @@
 site :opscode
 
-cookbook 'wercker-essential', github: "wercker/wercker-essential-cookbook", ref: "58ff5b87533c62311871d73c52d45ff71dd800b6"
+cookbook 'wercker-essential', github: "wercker/wercker-essential-cookbook", ref: "dc4522e8ba8cee24f78817afed7813c40c9f6c92"
 cookbook 'apt', '1.8.2'
 cookbook 'python'
 cookbook 'mysql'

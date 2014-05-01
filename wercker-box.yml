@@ -1,6 +1,5 @@
 name: ubuntu12.04-webessentials
 version: 1.0.2-alpha
-inherits: wercker/ubuntu12.04-chef10.18.2@1.0.0
 type: main
 platform: ubuntu@12.04
 description: Base box with most popular libraries for the web installed
@@ -11,7 +10,7 @@ packages:
   - git-core
   - nano
   - language-pack-en
-  - nodejs
+  - nodejs@0.10.26
   - erlang
   - openjdk-6-jre
   - ruby1.9.3
@@ -41,15 +40,19 @@ packages:
   - elasticsearch@0.20.5
   - phantomjs@1.9.1
   - libv8-dev
-  - postgresql-client@9.2
-  - optipng
+  - postgresql-client@9.3
+  - optipng@0.7.5
   - libjpeg-dev
   - libpng-dev
 script: |
+  curl -L https://www.opscode.com/chef/install.sh | sudo bash
+
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
+
+  cd $WERCKER_SOURCE_DIR
   export
   ./hosts.sh
-  sudo apt-get --purge remove postgresql\*
+  # sudo apt-get --purge remove postgresql\*
 
   wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
   sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/postgresql.list"
