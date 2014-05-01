@@ -61,20 +61,21 @@ script: |
   sudo add-apt-repository ppa:chris-lea/node.js -y
 
   sudo apt-get update
-  sudo apt-get install nodejs postgresql-client-9.3 optipng libjpeg-dev libpng-dev -y
+  sudo apt-get install nodejs postgresql-client-9.3 libjpeg-dev libpng-dev -y
   export DATA=`node -v`
   if [ ! $DATA = "v0.10.26" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
 
   # download/build optipng
   cd $HOME
   wget http://downloads.sourceforge.net/project/optipng/OptiPNG/optipng-0.7.5/optipng-0.7.5.tar.gz
-  tar -C optipng -xf optipng-0.7.5.tar.gz
-  cd optipng
+  tar xf optipng-0.7.5.tar.gz
+  cd optipng-0.7.5
   ./configure
   make
   sudo checkinstall
   cd $HOME
-  rm -rf optipng
+  sudo rm -rf optipng-0.7.5
+  sudo rm optipng-0.7.5.tar.gz
   optipng -v
   error "show optipng version"
 
