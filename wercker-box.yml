@@ -45,6 +45,7 @@ packages:
   - libjpeg-dev
   - libpng-dev
 script: |
+  sudo apt-get install curl -y
   curl -L https://www.opscode.com/chef/install.sh | sudo bash
 
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
