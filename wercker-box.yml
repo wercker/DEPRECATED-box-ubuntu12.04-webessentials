@@ -45,25 +45,25 @@ packages:
   - libjpeg-dev
   - libpng-dev
 script: |
-  sudo apt-get update
-  sudo apt-get install curl -y
-  curl -L https://www.opscode.com/chef/install.sh | sudo bash
+  # sudo apt-get update
+  # sudo apt-get install curl -y
+  # curl -L https://www.opscode.com/chef/install.sh | sudo bash
 
-  sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
+  # sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
 
-  cd $WERCKER_SOURCE_DIR
-  export
-  ./hosts.sh
-  # sudo apt-get --purge remove postgresql\*
+  # cd $WERCKER_SOURCE_DIR
+  # export
+  # ./hosts.sh
+  # # sudo apt-get --purge remove postgresql\*
 
-  wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-  sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/postgresql.list"
-  sudo add-apt-repository ppa:chris-lea/node.js -y
+  # wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+  # sudo sh -c "echo deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main > /etc/apt/sources.list.d/postgresql.list"
+  # sudo add-apt-repository ppa:chris-lea/node.js -y
 
-  sudo apt-get update
-  sudo apt-get install nodejs postgresql-client-9.3 libjpeg-dev libpng-dev checkinstall -y
-  export DATA=`node -v`
-  if [ ! $DATA = "v0.10.26" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
+  # sudo apt-get update
+  # sudo apt-get install nodejs postgresql-client-9.3 libjpeg-dev libpng-dev checkinstall -y
+  # export DATA=`node -v`
+  # if [ ! $DATA = "v0.10.26" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
 
   # download/build optipng
   cd $HOME
