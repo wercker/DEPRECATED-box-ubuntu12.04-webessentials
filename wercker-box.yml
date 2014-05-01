@@ -74,6 +74,8 @@ script: |
   sudo checkinstall
   cd $HOME
   rm -rf optipng-0.7.5
+  optipng -v
+  error "show optipng version"
 
   # fix permissions for home temp folder
   mkdir -p $HOME/tmp
