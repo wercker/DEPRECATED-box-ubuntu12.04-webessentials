@@ -14,6 +14,7 @@ The MIT License (MIT)
 
 ## 1.0.3
 - phantomjs 1.9.7 fixed
+- updated node version (0.10.28)
 
 ## 1.0.2
 - use newer node version (0.10.26)

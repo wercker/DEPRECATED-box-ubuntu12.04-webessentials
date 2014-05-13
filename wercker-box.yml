@@ -65,7 +65,7 @@ script: |
   sudo apt-get update
   sudo apt-get install nodejs postgresql-client-9.3 libjpeg-dev libpng-dev checkinstall -y
   export DATA=`node -v`
-  if [ ! $DATA = "v0.10.26" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
+  if [ ! $DATA = "v0.10.28" ] ; then error "Node v0.10.26 expected, got: $DATA" ; fi
 
   npm -v
 
@@ -94,4 +94,4 @@ script: |
   mkdir phantomjs
   tar -C phantomjs --strip-components=1 -xf phantomjs-1.9.7-linux-x86_64.tar.bz2
   echo 'export PATH=\"$HOME/phantomjs/bin:$PATH\"' >> ~/.bash_profile
-  phantomjs -v
+  phantomjs/bin/phantomjs -v
