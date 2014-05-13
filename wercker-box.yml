@@ -1,5 +1,5 @@
 name: ubuntu12.04-webessentials
-version: 1.0.3
+version: 1.0.4
 type: main
 platform: ubuntu@12.04
 description: Base box with most popular libraries for the web installed
@@ -93,5 +93,5 @@ script: |
   wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
   mkdir phantomjs
   tar -C phantomjs --strip-components=1 -xf phantomjs-1.9.7-linux-x86_64.tar.bz2
-  echo 'export PATH=\"$HOME/phantomjs/bin:$PATH\"' >> ~/.bash_profile
+  echo 'export PATH="$HOME/phantomjs/bin:$PATH"' >> ~/.bash_profile
   phantomjs/bin/phantomjs -v
