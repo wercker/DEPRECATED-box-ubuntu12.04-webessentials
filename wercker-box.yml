@@ -83,7 +83,7 @@ script: |
   sudo rm -rf optipng-0.7.5
   sudo rm optipng-0.7.5.tar.gz
   optipng -v
-  error "show optipng version"
+  phantomjs -v
 
   # fix permissions for home temp folder
   mkdir -p $HOME/tmp

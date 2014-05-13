@@ -12,6 +12,9 @@ The MIT License (MIT)
 
 # Changelog
 
+## 1.0.3
+- phantomjs 1.9.7 fixed
+
 ## 1.0.2
 - use newer node version (0.10.26)
 - optipng updated to 0.7.5
